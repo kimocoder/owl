@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <net/ethernet.h>
 
 #define LOG_VERSION "0.1.0"
 
@@ -46,5 +47,9 @@ void log_set_level(int level);
 void log_set_quiet(int enable);
 
 int log_log(int level, const char *file, int line, const char *fmt, ...);
+
+char *ether_ntoa_r(const struct ether_addr *addr, char *buf);
+
+char *ether_ntoa(const struct ether_addr *addr);
 
 #endif

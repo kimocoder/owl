@@ -21,11 +21,7 @@
 #define OWL_NETUTILS_H_
 
 #include <netinet/in.h>
-#ifdef __APPLE__
 #include <net/ethernet.h>
-#else
-#include <netinet/ether.h>
-#endif
 
 /**
  * Needs to be run once before netutils can be used (platform-dependent).

@@ -25,11 +25,7 @@
 #include <net/if.h>
 #include <limits.h>
 
-#ifdef __APPLE__
 #include <net/ethernet.h>
-#else
-#include <netinet/ether.h>
-#endif
 
 struct io_state {
 	pcap_t *wlan_handle;
